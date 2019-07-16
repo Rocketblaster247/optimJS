@@ -10,17 +10,20 @@ var runProgram = function (array) {
   };
   _a();
 };
-var loop = function (f, i) {
+//loop(
+//  f = function to loop,
+//  n = name of the number to increment,
+//  t = times the number should increment,
+//  fpi = frames per iteration
+//);
+var loop = function (f, n, t, fpi) {
   var jbnNow = Date.now();
-  var e = i;
+  var e = f.toString().split("function () {")[1];
+  console.log(e);
+  e = e.toString().split("}")[e.toString().split("}").length];
+  console.log(e);
   var _a = function () {
-    if (i != 0) {
-      f(e - i);
-      i --;
-      window.requestAnimationFrame(_a);
-    } else {
-      console.log(Date.now()-jbnNow);
-    }
+    
   };
   _a();
 };

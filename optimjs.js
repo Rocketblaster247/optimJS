@@ -20,7 +20,7 @@ var loop = function (f, n, t, fpi) {
   var jbnNow = Date.now();
   var e = f.toString().split("function () {")[1];
   console.log(e);
-  e = e.toString().split("}")[e.toString().split("}").length];
+  e = e.toString().split("}")[e.toString().split("}").length-2];
   console.log(e);
   var _a = function () {
     

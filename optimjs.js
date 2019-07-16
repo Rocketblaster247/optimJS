@@ -22,7 +22,7 @@ var loop = function (f, a, b) {
   var done = false;
   var _a = function () {
     for (var i = 0; i < (b || 30); i ++) {
-      if (index < (a*b)) {
+      if (((index*b)+i) < (a*b)) {
         f((index*b)+i);
         index ++;
         window.requestAnimationFrame(_a);

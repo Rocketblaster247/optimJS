@@ -2,7 +2,7 @@ var optimLog = false;
 var runProgram = function (array) {
   var index = 0;
   var _a = function () {
-    if (index < array.length - 1) {
+    if (index < array.length) {
       eval(array[index]);
       index ++;
       window.requestAnimationFrame(_a);

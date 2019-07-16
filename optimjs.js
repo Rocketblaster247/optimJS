@@ -31,5 +31,5 @@ var loop = function (f, a, b) {
   _a();
   var s = Date.now() - jbnNow;
   var fps = Math.floor((a*b)/Math.floor(s/1000));
-  console.log("OptimJS: Loaded function in " + jbnNow + "ms (" + fps + "fps)");
+  console.log("OptimJS: Loaded function in " + s + "ms (" + fps + "fps)");
 };

@@ -22,8 +22,16 @@ var loop = function (f, n, t, fpi) {
   console.log(e);
   e = e.toString().split("}")[e.toString().split("}").length-2];
   console.log(e);
+  e = 'for (var ' + escape(n) + ' = 0; ' + escape(n) +' < ' + fpi + '; ' + escape(n) + '++){' + e + '}';
+  var index = 0;
   var _a = function () {
-    
+    if (index < (t*fpi) + fpi) {
+      eval(e);
+      window.requestAnimationFrame(_a);
+      index ++;
+    } else {
+      
+    }
   };
   _a();
 };

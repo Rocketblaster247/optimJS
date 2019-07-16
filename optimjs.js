@@ -18,4 +18,5 @@ var loop = function (f, i) {
       window.requestAnimationFrame();
     }
   };
+  _a();
 };

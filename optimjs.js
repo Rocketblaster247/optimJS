@@ -4,7 +4,7 @@ var runProgram = function (array) {
     if (index < array.length - 1) {
       array[index]();
       index ++;
-      window.requestAnimationFrame();
+      window.requestAnimationFrame(_a);
     }
   };
   _a();
@@ -15,7 +15,7 @@ var loop = function (f, i) {
     if (i != 0) {
       f(e - i);
       i --;
-      window.requestAnimationFrame();
+      window.requestAnimationFrame(_a);
     }
   };
   _a();

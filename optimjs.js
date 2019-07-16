@@ -27,13 +27,13 @@ var loop = function (f, a, b) {
         index ++;
         window.requestAnimationFrame(_a);
       } else {
-        var s = Date.now() - jbnNow;
-        var fps = Math.floor((a*b)/(s/1000));
-        console.log("OptimJS: Loaded function in " + s + "ms (" + fps + "fps)");
-        done = true;
+        return;
       }
     }
   };
   _a();
-  
+  var s = Date.now() - jbnNow;
+  var fps = Math.floor((a*b)/(s/1000));
+  console.log("OptimJS: Loaded function in " + s + "ms (" + fps + "fps)");
+  done = true;
 };

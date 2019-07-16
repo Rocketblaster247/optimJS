@@ -20,7 +20,7 @@ var loop = function (f, a, b) {
   var jbnNow = Date.now();
   var index = 0;
   var _a = function () {
-    for (var i = 0; i < b || 30; i ++) {
+    for (var i = 0; i < (b || 30); i ++) {
       if (index < a) {
         f((index*b)+i);
         index ++;

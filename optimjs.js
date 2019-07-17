@@ -19,6 +19,7 @@ var runProgram = function (array) {
 //);
 var loop = function (f, a, b, f2) {
   b = b || 30;
+  f2 = f2 || function () {};
   var now = Date.now();
   var index = 0;
   var _a = function () {

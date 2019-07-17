@@ -23,6 +23,7 @@ var loop = function (f, a, b) {
   var done = false;
   var _a = function () {
     for (var i = 0; i < (b); i ++) {
+      console.log(((index*b)+i)+":"+(a*b));
       if (((index*b)+i) < (a*b)) {
         f((index*b)+i);
         index ++;

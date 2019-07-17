@@ -32,8 +32,7 @@ var loop = function (f, a, b, f2) {
       var s = Date.now() - now;
       var fps = Math.floor((a*b)/(s/1000));
       console.log("OptimJS: Loaded " + (a*b) + " frames in " + Math.floor(s/1000) + " seconds (" + fps + "fps)");
-      f2();
-      return;
+      return f2();
     }
   };
   _a();

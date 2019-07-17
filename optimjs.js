@@ -17,11 +17,12 @@ var runProgram = function (array) {
 //  fpi = frames per iteration
 //);
 var loop = function (f, a, b) {
+  b = b || 30;
   var jbnNow = Date.now();
   var index = 0;
   var done = false;
   var _a = function () {
-    for (var i = 0; i < (b || 30); i ++) {
+    for (var i = 0; i < (b); i ++) {
       if (((index*b)+i) < (a*b)) {
         f((index*b)+i);
         index ++;

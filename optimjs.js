@@ -14,9 +14,10 @@ var runProgram = function (array) {
 //  f = function to loop,
 //  n = name of the number to increment,
 //  t = times the number should increment,
-//  fpi = frames per iteration
+//  fpi = frames per iteration,
+//  f2 = function to run when done,
 //);
-var loop = function (f, a, b) {
+var loop = function (f, a, b, f2) {
   b = b || 30;
   var now = Date.now();
   var index = 0;
@@ -31,6 +32,7 @@ var loop = function (f, a, b) {
       var s = Date.now() - now;
       var fps = Math.floor((a*b)/(s/1000));
       console.log("OptimJS: Loaded " + (a*b) + " frames in " + Math.floor(s/1000) + " seconds (" + fps + "fps)");
+      f2();
       return;
     }
   };

@@ -24,13 +24,13 @@ var loop = function (f, a, b) {
   var _a = function () {
     for (var i = 0; i < (b); i ++) {
       console.log(((index*b)+i)+":"+(a*b));
-      if (((index*b)+i) < (a*b)) {
-        f((index*b)+i);
-        index ++;
-        window.requestAnimationFrame(_a);
-      } else {
-        return;
-      }
+      f((index*b)+i);
+    }
+    if (((index*b)+i) < (a*b)) {
+      index ++;
+      window.requestAnimationFrame(_a);
+    } else {
+      return;
     }
   };
   _a();

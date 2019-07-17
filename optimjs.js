@@ -18,9 +18,8 @@ var runProgram = function (array) {
 //);
 var loop = function (f, a, b) {
   b = b || 30;
-  var jbnNow = Date.now();
+  var now = Date.now();
   var index = 0;
-  var done = false;
   var _a = function () {
     for (var i = 0; i < (b); i ++) {
       f((index*b)+i);
@@ -29,12 +28,12 @@ var loop = function (f, a, b) {
       index ++;
       window.requestAnimationFrame(_a);
     } else {
+      var s = Date.now() - now;
+      var fps = Math.floor((a*b)/(s/1000));
+      console.log("OptimJS: Loaded function in " + s + "ms (" + fps + "fps)");
       return;
     }
   };
   _a();
-  var s = Date.now() - jbnNow;
-  var fps = Math.floor((a*b)/(s/1000));
-  console.log("OptimJS: Loaded function in " + s + "ms (" + fps + "fps)");
-  done = true;
+  
 };
